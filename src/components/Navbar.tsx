@@ -1,5 +1,6 @@
 import { ShoppingCart, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -7,20 +8,22 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-8">
-            <h1 className="text-2xl font-black tracking-tight">ROPAPLUS</h1>
+            <Link to="/" className="text-2xl font-black tracking-tight hover:text-accent transition-colors">
+              ROPAPLUS
+            </Link>
             <div className="hidden md:flex items-center gap-6">
-              <a href="#" className="text-sm font-medium hover:text-accent transition-colors">
+              <Link to="/hombre" className="text-sm font-medium hover:text-accent transition-colors">
                 HOMBRE
-              </a>
-              <a href="#" className="text-sm font-medium hover:text-accent transition-colors">
+              </Link>
+              <Link to="/mujer" className="text-sm font-medium hover:text-accent transition-colors">
                 MUJER
-              </a>
-              <a href="#" className="text-sm font-medium hover:text-accent transition-colors">
+              </Link>
+              <Link to="/novedades" className="text-sm font-medium hover:text-accent transition-colors">
                 NOVEDADES
-              </a>
-              <a href="#" className="text-sm font-medium hover:text-accent transition-colors">
+              </Link>
+              <Link to="/ofertas" className="text-sm font-medium hover:text-accent transition-colors">
                 OFERTAS
-              </a>
+              </Link>
             </div>
           </div>
           
