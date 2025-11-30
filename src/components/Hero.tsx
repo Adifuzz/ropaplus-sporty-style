@@ -31,8 +31,8 @@ const Hero = () => {
           </Button>
           <Button 
             size="lg" 
-            variant="outline" 
-            className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-bold text-base px-8 py-6 rounded-sm"
+            variant="hero" 
+            className="font-bold text-base px-8 py-6 rounded-sm"
           >
             VER COLECCIÓN
           </Button>
