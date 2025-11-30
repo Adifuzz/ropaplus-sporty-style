@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 const categories = [
-  { name: "ZAPATILLAS", image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=400&fit=crop" },
-  { name: "ROPA DEPORTIVA", image: "https://images.unsplash.com/photo-1556906781-9a412961c28c?w=600&h=400&fit=crop" },
-  { name: "ACCESORIOS", image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&h=400&fit=crop" },
-  { name: "TRAINING", image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=400&fit=crop" },
+  { name: "ZAPATILLAS", image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=400&fit=crop", link: "/zapatillas" },
+  { name: "ROPA DEPORTIVA", image: "https://images.unsplash.com/photo-1556906781-9a412961c28c?w=600&h=400&fit=crop", link: "/ropa-deportiva" },
+  { name: "ACCESORIOS", image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&h=400&fit=crop", link: "/accesorios" },
+  { name: "TRAINING", image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=400&fit=crop", link: "/training" },
 ];
 
 const Categories = () => {
@@ -15,8 +17,9 @@ const Categories = () => {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((category) => (
-            <div
+            <Link
               key={category.name}
+              to={category.link}
               className="group relative overflow-hidden cursor-pointer rounded-sm aspect-[3/4]"
             >
               <img
@@ -29,7 +32,7 @@ const Categories = () => {
                   {category.name}
                 </h3>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
